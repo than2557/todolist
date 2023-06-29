@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage("Clone Git Repository") {
-           step{
+           steps{
                   git(
                     url: "https://github.com/than2557/todolist.git",
                     branch: "master",
