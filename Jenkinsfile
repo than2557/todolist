@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        steps("Clone Git Repository") {
-           
-                git(
+        stage("Clone Git Repository") {
+           step{
+                  git(
                     url: "https://github.com/than2557/todolist.git",
                     branch: "master",
                     changelog: true,
@@ -11,28 +11,26 @@ pipeline {
                      
                 )
                 echo 'Git Clone complete'
-          
-        }
-        steps("install package npm"){
-        
+           }
+        },
+        stage("install package npm"){
+             steps{
             sh :'npm install'
             echo :'install package npm complete'
-           
-    
         }
-        steps("build package"){
-         
+        },
+       stage("build package"){
+        steps{
             sh :'npm run build'
             echo :'build package complete'
-       
-    
         }
-         steps("serve"){
-         
+       },
+        stage("serve"){
+              steps{
             sh :'npm install serve -g'
             echo :'npm install serve complete'
-        
-    
         }
+        }
+       
     }
 }
