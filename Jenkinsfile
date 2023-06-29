@@ -12,19 +12,19 @@ pipeline {
                 )
                 echo 'Git Clone complete'
            }
-        },
+        }
         stage("install package npm"){
              steps{
             sh :'npm install'
             echo :'install package npm complete'
         }
-        },
+        }
        stage("build package"){
         steps{
             sh :'npm run build'
             echo :'build package complete'
         }
-       },
+       }
         stage("serve"){
               steps{
             sh :'npm install serve -g'
