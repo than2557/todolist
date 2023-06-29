@@ -12,7 +12,7 @@ pipeline {
                 )
                 echo 'Git Clone complete'
             }
-        },
+        }
         stage("install package npm"){
             step{
             sh :'npm install'
