@@ -15,20 +15,20 @@ pipeline {
         }
         stage("install package npm"){
              steps{
-            sh :'npm install'
-            echo :'install package npm complete'
+            sh 'npm install'
+            echo 'install package npm complete'
         }
         }
        stage("build package"){
         steps{
-            sh :'npm run build'
-            echo :'build package complete'
+            sh 'npm run build'
+            echo 'build package complete'
         }
        }
         stage("serve"){
               steps{
-            sh :'npm install serve -g'
-            echo :'npm install serve complete'
+            sh 'npm install serve -g'
+            echo 'npm install serve complete'
         }
         }
        
