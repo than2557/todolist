@@ -27,7 +27,7 @@ pipeline {
        }
         stage("serve"){
               steps{
-            sh 'npm install --global serve'
+            sh 'serve -s dist'
             echo 'npm install serve complete'
         }
         }
