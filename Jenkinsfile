@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage ("docker root"){
+            steps{
+                sh 'docker exec -u 0 -it 71cda817dc49  bash'
+            }
+        }
         stage("cd path") {
      steps{ 
                 sh 'cd ..'
