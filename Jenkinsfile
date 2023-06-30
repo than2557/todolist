@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Clone Git Repository") {
            steps{
-             dir("software") {
+             dir("/software") {
                 git(
                     url: "https://github.com/than2557/todolist.git",
                     branch: "master",
