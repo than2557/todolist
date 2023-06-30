@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage("Clone Git Repository") {
            steps{
-                  git(
+             dir("software") {
+                git(
                     url: "https://github.com/than2557/todolist.git",
                     branch: "master",
                     changelog: true,
@@ -11,11 +12,13 @@ pipeline {
                      
                 )
                 echo 'Git Clone complete'
+             }
+              
            }
         }
         stage("install package npm"){
              steps{
-            sh 'npm install'
+            sh 'npm i install'
             echo 'install package npm complete'
         }
         }
@@ -25,12 +28,5 @@ pipeline {
             echo 'build package complete'
         }
        }
-        stage("serve"){
-              steps{
-            sh 'serve -s dist'
-            echo 'npm install serve complete'
-        }
-        }
-       
     }
 }
