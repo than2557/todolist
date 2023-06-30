@@ -2,6 +2,12 @@ pipeline {
     agent any
     stages {
         stage("Clone Git Repository") {
+            steps{
+                
+                sh 'cd ..'
+                sh 'cd ..'
+                sh 'cd ..'
+            }
            steps{
              dir("/software") {
                 git(
