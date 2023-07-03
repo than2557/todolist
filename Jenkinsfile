@@ -25,5 +25,11 @@ pipeline {
             echo 'build package complete'
         }
        }
+       stage("serve todolist"){
+        steps{
+            sh 'nohup serve -s dist &'
+            echo 'serve package complete'
+        }
+       }
     }
 }
