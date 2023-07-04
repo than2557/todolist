@@ -52,7 +52,7 @@ function Todolist(){
     }));
 
 useEffect(()=>{
-
+console.log(formTodoData.Todocolor)
 },[numlistTodo])
 
 

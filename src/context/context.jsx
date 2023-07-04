@@ -46,7 +46,6 @@ function AppContextProvider({ children }) {
   };
 
   const handleChange = (e) => {
-    
     setFormDataTodo({ ...formTodoData, [e.target.name]: e.target.value });
   };
 

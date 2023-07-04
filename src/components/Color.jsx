@@ -22,7 +22,7 @@ function Color() {
         setState({ displayColorPicker: false })
       };
     
-    const  handleChangeColor = (color,) => {
+    const  handleChangeColor = (color) => {
         setFormDataTodo({ ...formTodoData, "Todocolor" : color.hex  });
         console.log(formTodoData)
         console.log(color)
